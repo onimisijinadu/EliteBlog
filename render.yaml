@@ -1,0 +1,12 @@
+services:
+- type:web
+  name: json-server
+  env: node
+  branch: main
+  region: oregon
+  plan: free
+  buildCommand: npm install
+  startCommand: npx json-erver --watch data/db.json --port 8000
+  envVars:
+    - key: NODE_ENV
+      value: production
