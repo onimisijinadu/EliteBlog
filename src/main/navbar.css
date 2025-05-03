@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  background-color: hsl(196, 27%, 8%);
+  margin: 0;
+}
+.blogname {
+  font-weight: bold;
+}
+.white {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.7em;
+}
+.red {
+  color: hsla(0, 100%, 50%, 0.952);
+  font-size: 1.8em;
+}
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 500;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: aliceblue;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  text-align: right;
+}
+.navbar-links a:hover {
+  color: hsl(342, 100%, 32%);
+}
+.navbar-links button {
+  background-color: transparent;
+  color: hsl(0, 0%, 100%);
+  padding: 10px 15px;
+  margin: 0 0.5em;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 15px;
+}
+.navbar-links button:hover {
+  background-color: white;
+  color: red;
+}

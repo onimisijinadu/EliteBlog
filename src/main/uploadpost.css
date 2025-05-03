@@ -1,0 +1,32 @@
+.uploadpost {
+  max-width: 70%;
+  text-align: center;
+  margin: 40px auto;
+}
+
+.uploadpost input,
+.uploadpost textarea {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 25px 0;
+  display: block;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: left;
+}
+button {
+  background: black;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-weight: bold;
+}

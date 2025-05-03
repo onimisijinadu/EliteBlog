@@ -1,0 +1,20 @@
+.Blog_detail {
+  display: block;
+  text-align: center;
+  margin: 60px auto;
+  color: black;
+}
+.Blog_detail h1 {
+  display: block;
+  text-align: left;
+  font-size: 35px;
+  width: 50%;
+  margin: 5px auto;
+}
+
+.Blog_detail p {
+  display: block;
+  text-align: left;
+  width: 50%;
+  margin: 5px auto;
+}
