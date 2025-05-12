@@ -3,8 +3,9 @@ import "/src/main/uploadpost.css";
 import { useNavigate } from "react-router-dom";
 export default function CreateBlog() {
   const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-  const [author, setAuthor] = useState("");
+  const [body, setContent] = useState("");
+  //  const [author, setAuthor] = useState("");
+
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   //   const [error, setError] = useState(null);
@@ -12,8 +13,8 @@ export default function CreateBlog() {
   const handlesubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const blog = { title, content, author };
-    fetch("http://localhost:8000/blogs", {
+    const blog = { title, body };
+    fetch("https://jsonplaceholder.typicode.com/posts/", {
       method: "POST",
       headers: { "content-Type": "application/json" },
       body: JSON.stringify(blog),
@@ -21,18 +22,6 @@ export default function CreateBlog() {
       setIsLoading(false);
       navigate("/");
     });
-    //   .then((res) => {
-    //     if (!res.ok) {
-    //       throw error("Unable to Upload Blogs");
-    //     } else {
-    //       alert("Blog added Successfully");
-    //       setIsLoading(false);
-    //       navigate("/");
-    //     }
-    //   })
-    //   .catch((err) => {
-    //     setError(err.message);
-    //   });
   };
   return (
     <div className="uploadpost">
@@ -45,18 +34,18 @@ export default function CreateBlog() {
           required
         />
         <textarea
-          value={content}
+          value={body}
           onChange={(e) => setContent(e.target.value)}
           placeholder="Blog Content"
           required
         ></textarea>
-        <input
+        {/* <input
           type="text"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
           placeholder="Author Name"
           required
-        />
+        /> */}
         {isLoading ? <button>Adding Blog</button> : <button>Add Blog</button>}
       </form>
     </div>

@@ -18,3 +18,11 @@
   width: 50%;
   margin: 5px auto;
 }
+@media screen and (width <= 768px) {
+  .Blog_detail h1 {
+    width: 85%;
+  }
+  .Blog_detail p {
+    width: 85%;
+  }
+}

@@ -1,3 +1,6 @@
+* {
+  overflow-x: hidden;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -6,6 +9,7 @@
   gap: 1rem;
   background-color: hsl(196, 27%, 8%);
   margin: 0;
+  overflow: hidden;
 }
 .blogname {
   font-weight: bold;
@@ -46,4 +50,101 @@
 .navbar-links button:hover {
   background-color: white;
   color: red;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 22px;
+  cursor: pointer;
+  z-index: 10000;
+  overflow-y: hidden;
+}
+.item {
+  width: 30px;
+  background-color: white;
+  height: 4px;
+  border-radius: 2px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.hamburger:active .item1 {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+
+.hamburger:active .item2 {
+  opacity: 0;
+}
+
+.hamburger:active .item3 {
+  transform: rotate(-45deg) translate(5px, -8px);
+}
+
+.mobile_nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 75px;
+  /* right: -200%; */
+  background-color: hsl(192, 26%, 4%);
+  width: 25%;
+  height: 100sh;
+  padding: 1rem 2rem 2rem 2rem;
+  transition: right 0.4s ease-in-out;
+  z-index: 1000;
+  overflow: hidden;
+  border-radius: 0 0 0 20px;
+  overflow: hidden;
+}
+
+@media (/*400px*/ width <= 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  /* .mobile_nav {
+    display: flex;
+  } */
+  .mobile_nav a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    text-align: center;
+  }
+  .mobile_nav a:hover {
+    color: hsl(342, 100%, 32%);
+  }
+
+  .mobile_nav.open {
+    display: flex;
+    text-align: center;
+    right: 0;
+    /* transition: time 0.7s linear infinite; */
+  }
+  .mobile_nav button {
+    background-color: transparent;
+    color: hsl(0, 0%, 100%);
+    padding: 5px 10px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 15px;
+  }
+  .mobile_overlay {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .mobile_overlay.show {
+    opacity: 1;
+    pointer-events: all;
+  }
 }

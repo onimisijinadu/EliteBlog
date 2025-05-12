@@ -9,7 +9,7 @@ export default function Home() {
     data: blogs,
     isPending,
     error,
-  } = useFetch("http://localhost:8000/blogs");
+  } = useFetch("https://jsonplaceholder.typicode.com/posts");
 
   return (
     <>
