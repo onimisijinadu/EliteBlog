@@ -3,8 +3,8 @@ import "/src/main/uploadpost.css";
 import { useNavigate } from "react-router-dom";
 export default function CreateBlog() {
   const [title, setTitle] = useState("");
-  const [body, setContent] = useState("");
-  //  const [author, setAuthor] = useState("");
+  const [content, setContent] = useState("");
+  const [author, setAuthor] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -13,12 +13,15 @@ export default function CreateBlog() {
   const handlesubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const blog = { title, body };
-    fetch("https://jsonplaceholder.typicode.com/posts/", {
-      method: "POST",
-      headers: { "content-Type": "application/json" },
-      body: JSON.stringify(blog),
-    }).then(() => {
+    const blog = { title, content, author };
+    fetch(
+      "https://my-json-server.typicode.com/onimisijinadu/EliteBlog/blogs/",
+      {
+        method: "POST",
+        headers: { "content-Type": "application/json" },
+        body: JSON.stringify(blog),
+      }
+    ).then(() => {
       setIsLoading(false);
       navigate("/");
     });
@@ -34,18 +37,18 @@ export default function CreateBlog() {
           required
         />
         <textarea
-          value={body}
+          value={content}
           onChange={(e) => setContent(e.target.value)}
           placeholder="Blog Content"
           required
         ></textarea>
-        {/* <input
+        <input
           type="text"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
           placeholder="Author Name"
           required
-        /> */}
+        />
         {isLoading ? <button>Adding Blog</button> : <button>Add Blog</button>}
       </form>
     </div>

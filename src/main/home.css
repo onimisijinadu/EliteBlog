@@ -1,6 +1,6 @@
-* {
+/* * {
   overflow: hidden;
-}
+} */
 .home {
   display: flex;
   justify-content: space-between;

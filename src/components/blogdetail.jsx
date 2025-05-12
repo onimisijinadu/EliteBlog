@@ -8,25 +8,27 @@ import { useState } from "react";
 export default function BlogDetails() {
   const { id } = useParams();
   const {
-    data: post,
+    data: blog,
     isPending,
     error,
-  } = useFetch("https://jsonplaceholder.typicode.com/posts/" + id);
+  } = useFetch(
+    "https://my-json-server.typicode.com/onimisijinadu/EliteBlog/blogs/" + id
+  );
   return (
     <div className="Blog_detail">
       {isPending && <div className="loading"> Loading.......</div>}
       {error && <div className="errors">{error}</div>}
-      {post && (
+      {blog && (
         <article>
-          <h1>{post.title}</h1>
-          {/*<p className="author">written by {post.author}</p>*/}
-          <p>{post.body}</p>
+          <h1>{blog.title}</h1>
+          <p className="author">written by {blog.author}</p>
+          <p>{blog.content}</p>
         </article>
       )}
-      {/*link to edit post*/}
-      {post && (
-        <Link to={`/posts/${post.id}/edit`}>
-          <button style={{ margin: "10px" }}>Edit Post</button>
+      {/*link to edit blog*/}
+      {blog && (
+        <Link to={`/blogs/${blog.id}/edit`}>
+          <button style={{ margin: "10px" }}>Edit blog</button>
         </Link>
       )}
     </div>

@@ -9,7 +9,9 @@ export default function Home() {
     data: blogs,
     isPending,
     error,
-  } = useFetch("https://jsonplaceholder.typicode.com/posts");
+  } = useFetch(
+    "https://my-json-server.typicode.com/onimisijinadu/EliteBlog/blogs/"
+  );
 
   return (
     <>

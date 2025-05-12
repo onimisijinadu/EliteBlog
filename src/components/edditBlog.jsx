@@ -4,21 +4,23 @@ import { useNavigate, useParams } from "react-router-dom";
 
 export default function EditBlog() {
   const [title, setTitle] = useState("");
-  const [body, setContent] = useState("");
-  //const [author, setAuthor] = useState("");
+  const [content, setContent] = useState("");
+  const [author, setAuthor] = useState("");
   const navigate = useNavigate();
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    fetch(
+      `https://my-json-server.typicode.com/onimisijinadu/EliteBlog/blogs/${id}`
+    )
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         setTitle(data.title);
-        setContent(data.body);
-        // setAuthor(data.author);
+        setContent(data.content);
+        setAuthor(data.author);
       })
       .catch((err) => {
         console.log(err);
@@ -29,13 +31,16 @@ export default function EditBlog() {
     e.preventDefault();
     setIsLoading(true);
 
-    const blog = { title, body };
+    const blog = { title, content, author };
 
-    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-      method: "PUT",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(blog),
-    }).then((res) => {
+    fetch(
+      `https://my-json-server.typicode.com/onimisijinadu/EliteBlog/blogs/${id}`,
+      {
+        method: "PUT",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(blog),
+      }
+    ).then((res) => {
       console.log("Post successfully edited");
       setIsLoading(false);
       navigate("/");
@@ -57,13 +62,13 @@ export default function EditBlog() {
           placeholder="Post Content"
           required
         ></textarea>
-        {/* <input
+        <input
           type="text"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
           placeholder="Author Name"
           required
-        /> */}
+        />
         <button type="submit" disabled={isLoading}>
           {isLoading ? "Saving....." : "Save Changes"}
         </button>
