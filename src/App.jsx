@@ -14,7 +14,7 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/EliteBlog/" element={<Home />} />
         <Route path="/create" element={<CreateBlog />} />
         <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="/blogs/:id/edit" element={<EditBlog />} />

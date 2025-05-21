@@ -23,7 +23,7 @@ export default function CreateBlog() {
       }
     ).then(() => {
       setIsLoading(false);
-      navigate("/");
+      navigate("/EliteBlog/");
     });
   };
   return (

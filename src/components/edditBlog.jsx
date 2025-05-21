@@ -38,12 +38,12 @@ export default function EditBlog() {
       {
         method: "PATCH",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify(updatedBlog)
+        body: JSON.stringify(updatedBlog),
       }
     ).then((res) => {
       console.log("Post successfully edited");
       setIsLoading(false);
-      navigate("/");
+      navigate("/EliteBlog/");
     });
   };
   return (

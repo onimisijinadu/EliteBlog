@@ -33,7 +33,7 @@ export default function Navbar() {
 
       {/* desktop navigation */}
       <div className="navbar-links">
-        <a href="/">Home</a>
+        <a href="/EliteBlog/">Home</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
         <a href="/create">
