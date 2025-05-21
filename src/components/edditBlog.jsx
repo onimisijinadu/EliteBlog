@@ -31,14 +31,14 @@ export default function EditBlog() {
     e.preventDefault();
     setIsLoading(true);
 
-    const blog = { title, content, author };
+    const updatedBlog = { title, content, author };
 
     fetch(
       `https://my-json-server.typicode.com/onimisijinadu/EliteBlog/blogs/${id}`,
       {
-        method: "PUT",
+        method: "PATCH",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify(blog),
+        body: JSON.stringify(updatedBlog)
       }
     ).then((res) => {
       console.log("Post successfully edited");

@@ -19,7 +19,7 @@ export default function BlogList({ blogs }) {
           <Link to={`/blogs/${blog.id}`}>
             <h2>{blog.title}</h2>
             <p>{blog.content.slice(0, 200)}</p>
-            {/*            <p className="author">written by {post.author}</p>*/}
+            <p className="author">written by {blog.author}</p>
           </Link>
         </div>
       ))}

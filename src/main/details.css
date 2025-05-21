@@ -1,28 +1,23 @@
 .Blog_detail {
   display: block;
   text-align: center;
-  margin: 60px auto;
+  margin: 0 auto;
   color: black;
 }
 .Blog_detail h1 {
   display: block;
-  text-align: left;
   font-size: 35px;
-  width: 50%;
-  margin: 5px auto;
+  margin: 10px;
 }
 
-.Blog_detail p {
+p {
   display: block;
-  text-align: left;
-  width: 50%;
-  margin: 5px auto;
+  margin: 5px;
+  line-height: 25px;
 }
 @media screen and (width <= 768px) {
-  .Blog_detail h1 {
-    width: 85%;
-  }
-  .Blog_detail p {
-    width: 85%;
+  p {
+    text-wrap: wrap;
+    margin: 5px;
   }
 }
