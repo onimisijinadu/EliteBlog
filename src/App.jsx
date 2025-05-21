@@ -12,17 +12,19 @@ import Footer from "./components/footer";
 import Notfound from "./components/Notfound";
 function App() {
   return (
-    <Router>
-      <NavBar />
-      <Routes>
-        <Route exact path="/EliteBlog/" element={<Home />} />
-        <Route path="/EliteBlog/create" element={<CreateBlog />} />
-        <Route path="/blogs/:id" element={<BlogDetails />} />
-        <Route path="/blogs/:id/edit" element={<EditBlog />} />
-        <Route path="*" element={<Notfound />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <BrowserRouter basename="/your-repo">
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route exact path="/EliteBlog/" element={<Home />} />
+          <Route path="/EliteBlog/create" element={<CreateBlog />} />
+          <Route path="/blogs/:id" element={<BlogDetails />} />
+          <Route path="/blogs/:id/edit" element={<EditBlog />} />
+          <Route path="*" element={<Notfound />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </BrowserRouter>
   );
 }
 
