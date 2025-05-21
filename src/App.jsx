@@ -9,15 +9,17 @@ import CreateBlog from "./components/createblog";
 import EditBlog from "./components/edditBlog";
 import useFetch from "./usefetch";
 import Footer from "./components/footer";
+import Notfound from "./components/Notfound";
 function App() {
   return (
     <Router>
       <NavBar />
       <Routes>
         <Route exact path="/EliteBlog/" element={<Home />} />
-        <Route path="/create" element={<CreateBlog />} />
+        <Route path="/EliteBlog/create" element={<CreateBlog />} />
         <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="/blogs/:id/edit" element={<EditBlog />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
       <Footer />
     </Router>

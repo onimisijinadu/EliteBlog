@@ -2,7 +2,7 @@ import "/src/main/home.css";
 
 export default function About() {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div></div>
       <h2>About EliteBlog</h2>
       <p>

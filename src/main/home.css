@@ -249,3 +249,21 @@ h1 span:nth-child(19) {
     width: 70px;
   }
 }
+.notfound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  text-wrap: wrap;
+  padding: 15px;
+  margin: 25px, 0, 0, 0;
+}
+.notfound a {
+  color: blue;
+  font-weight: 400;
+  font-size: 18px;
+}
+.notfound a:hover {
+  color: red;
+}
