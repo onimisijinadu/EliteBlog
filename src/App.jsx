@@ -9,7 +9,7 @@ import Footer from "./components/footer";
 import Notfound from "./components/Notfound";
 function App() {
   return (
-    <BrowserRouter basename="/EliteBlog">
+    <BrowserRouter basename="/EliteBlog/">
       <NavBar />
       <Routes>
         <Route exact path="/EliteBlog/" element={<Home />} />
