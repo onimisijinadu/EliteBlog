@@ -6,17 +6,18 @@ import BlogDetails from "./components/blogdetail";
 import CreateBlog from "./components/createblog";
 import EditBlog from "./components/edditBlog";
 import Footer from "./components/footer";
-import Notfound from "./components/Notfound";
+import Notfound from "./components/notfound";
+
 function App() {
   return (
-    <BrowserRouter basename="/EliteBlog/">
+    <BrowserRouter basename="/EliteBlog">
       <NavBar />
       <Routes>
-        <Route exact path="/EliteBlog/" element={<Home />} />
-        <Route path="/EliteBlog/create" element={<CreateBlog />} />
+        <Route index element={<Home />} />
+        <Route path="/create" element={<CreateBlog />} />
         <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="/blogs/:id/edit" element={<EditBlog />} />
-        <Route path="/*" element={<Notfound />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
