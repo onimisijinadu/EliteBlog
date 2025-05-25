@@ -12,8 +12,8 @@ function App() {
     <BrowserRouter basename="/EliteBlog">
       <NavBar />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/create" element={<CreateBlog />} />
+        <Route exact path="/EliteBlog/" element={<Home />} />
+        <Route path="/EliteBlog/create" element={<CreateBlog />} />
         <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="/blogs/:id/edit" element={<EditBlog />} />
         <Route path="/*" element={<Notfound />} />

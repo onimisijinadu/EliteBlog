@@ -19,10 +19,10 @@ export default function Navbar() {
       </div>
       {/* mobile navigation */}
       <div className={`mobile_nav ${isOpen ? "open" : ""}`}>
-        <a href="/">Home</a>
+        <a href="/EliteBlog/">Home</a>
         <a href="#about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/create">
+        <a href="/EliteBlog/contact">Contact</a>
+        <a href="/EliteBlog/create">
           <button>Upload blog</button>
         </a>
       </div>
@@ -33,10 +33,10 @@ export default function Navbar() {
 
       {/* desktop navigation */}
       <div className="navbar-links">
-        <a href="/">Home</a>
+        <a href="/EliteBlog/">Home</a>
         <a href="#about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/create">
+        <a href="/EliteBlog/contact">Contact</a>
+        <a href="/EliteBlog/create">
           <button>Upload blog</button>
         </a>
       </div>
