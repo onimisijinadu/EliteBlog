@@ -43,7 +43,7 @@ export default function EditBlog() {
     ).then((res) => {
       console.log("Post successfully edited");
       setIsLoading(false);
-      navigate("/EliteBlog/");
+      navigate("/");
     });
   };
   return (

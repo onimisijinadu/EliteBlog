@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "/src/main/home.css";
 export default function () {
   return (
@@ -9,15 +10,15 @@ export default function () {
         </p>
         <div className="footer-quicklinks">
           <h5>Quick links</h5>
-          <a href="/EliteBlog/">Home</a>
-          <a href="#about">About</a>
-          <a href="/EliteBlog/create">Create Post</a>
+          <Link to="/EliteBlog/">Home</Link>
+          <Link to="#about">About</Link>
+          <Link to="/create">Create Post</Link>
         </div>
         <div className="footer-contacts">
           <h5>Contact Us</h5>
-          <a href="">Facebook</a>
-          <a href="">X</a>
-          <a href="">Instagram</a>
+          <Link to="">Facebook</Link>
+          <Link to="">X</Link>
+          <Link to="">Instagram</Link>
         </div>
       </section>
 
