@@ -9,9 +9,9 @@ export default function () {
         </p>
         <div className="footer-quicklinks">
           <h5>Quick links</h5>
-          <a href="/EliteBlog/">Home</a>
+          <a href="/">Home</a>
           <a href="#about">About</a>
-          <a href="/EliteBlog/create">Create Post</a>
+          <a href="/create">Create Post</a>
         </div>
         <div className="footer-contacts">
           <h5>Contact Us</h5>
