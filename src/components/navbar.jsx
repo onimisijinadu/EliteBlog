@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "/src/main/navbar.css";
+import { Link } from "react-router-dom";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -19,12 +20,12 @@ export default function Navbar() {
       </div>
       {/* mobile navigation */}
       <div className={`mobile_nav ${isOpen ? "open" : ""}`}>
-        <a href="/EliteBlog/">Home</a>
-        <a href="#about">About</a>
-        <a href="/EliteBlog/contact">Contact</a>
-        <a href="/EliteBlog/create">
+        <Link to="/EliteBlog/">Home</Link>
+        <Link to="#about">About</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/create">
           <button>Upload blog</button>
-        </a>
+        </Link>
       </div>
       <div
         className={`mobile_overlay ${isOpen ? "show" : ""}`}
@@ -33,12 +34,12 @@ export default function Navbar() {
 
       {/* desktop navigation */}
       <div className="navbar-links">
-        <a href="/EliteBlog/">Home</a>
-        <a href="#about">About</a>
-        <a href="/EliteBlog/contact">Contact</a>
-        <a href="/create">
+        <Link to="/">Home</Link>
+        <Link to="#about">About</Link>
+        <Link href="/contact">Contact</Link>
+        <Link href="/create">
           <button>Upload blog</button>
-        </a>
+        </Link>
       </div>
     </div>
   );
