@@ -27,7 +27,7 @@ export default function CreateBlog() {
     });
   };
   return (
-    <div className="uploadpost">
+    <div className="uploadpost" id="create">
       <form onSubmit={handlesubmit}>
         <input
           type="text"

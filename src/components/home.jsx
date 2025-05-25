@@ -31,6 +31,7 @@ export default function Home() {
             <span>o</span>
             <span> </span>
             <span>E</span>
+            <span>l</span>
             <span>i</span>
             <span>t</span>
             <span>e</span>
