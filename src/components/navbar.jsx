@@ -36,7 +36,7 @@ export default function Navbar() {
         <a href="/EliteBlog/">Home</a>
         <a href="#about">About</a>
         <a href="/EliteBlog/contact">Contact</a>
-        <a href="/EliteBlog/create">
+        <a href="/EliteBlog/create/">
           <button>Upload blog</button>
         </a>
       </div>
