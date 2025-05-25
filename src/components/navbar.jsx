@@ -36,8 +36,8 @@ export default function Navbar() {
       <div className="navbar-links">
         <Link to="/">Home</Link>
         <Link to="#about">About</Link>
-        <Link href="/contact">Contact</Link>
-        <Link href="/create">
+        <Link to="/contact">Contact</Link>
+        <Link to="/create">
           <button>Upload blog</button>
         </Link>
       </div>
