@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter basename="/EliteBlog">
       <NavBar />
       <Routes>
-        <Route index element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/create" element={<CreateBlog />} />
         <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="/blogs/:id/edit" element={<EditBlog />} />
