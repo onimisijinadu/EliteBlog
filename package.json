@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/onimisijinadu/EliteBlog",
+  "homepage": "https://onimisijinadu.github.io/EliteBlog",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -16,6 +16,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icon": "^1.0.0",
+    "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^6.30.0"
   },
   "devDependencies": {
