@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // import viteLogo from "/vite.svg";
 import Home from "./components/home";
 import NavBar from "./components/navbar";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BlogDetails from "./components/blogdetail";
 import CreateBlog from "./components/createblog";
 import EditBlog from "./components/edditBlog";
