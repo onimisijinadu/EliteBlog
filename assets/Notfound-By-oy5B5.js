@@ -1,0 +1,1 @@
+import{j as o}from"./index-DAC_aQEu.js";function n(){return o.jsxs("div",{className:"notfound",children:[o.jsx("h1",{children:"404"}),o.jsx("h2",{children:"Page Not Found"}),o.jsx("p",{children:"The page you are looking for does not exist."}),o.jsx("a",{href:"/EliteBlog/",children:"Go to Home"})]})}export{n as default};
