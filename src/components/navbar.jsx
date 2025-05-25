@@ -20,7 +20,7 @@ export default function Navbar() {
       </div>
       {/* mobile navigation */}
       <div className={`mobile_nav ${isOpen ? "open" : ""}`}>
-        <Link to="/EliteBlog/">Home</Link>
+        <Link to="/">Home</Link>
         <Link to="#about">About</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/create">
