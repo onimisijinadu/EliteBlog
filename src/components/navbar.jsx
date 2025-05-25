@@ -21,8 +21,8 @@ export default function Navbar() {
       <div className={`mobile_nav ${isOpen ? "open" : ""}`}>
         <a href="/EliteBlog/">Home</a>
         <a href="#about">About</a>
-        <a href="/EliteBlog/#contact">Contact</a>
-        <a href="/EliteBlog/#create">
+        <a href="/EliteBlog/contact">Contact</a>
+        <a href="/EliteBlog/create">
           <button>Upload blog</button>
         </a>
       </div>
@@ -35,8 +35,8 @@ export default function Navbar() {
       <div className="navbar-links">
         <a href="/EliteBlog/">Home</a>
         <a href="#about">About</a>
-        <a href="/EliteBlog/#contact">Contact</a>
-        <a href="/EliteBlog/#create">
+        <a href="/EliteBlog/contact">Contact</a>
+        <a href="/EliteBlog/create">
           <button>Upload blog</button>
         </a>
       </div>
